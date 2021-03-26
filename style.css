@@ -1,0 +1,204 @@
+:root {
+    --main-yellow: #ffd92e;
+    --main-yellow-darker: #f0cd2d;
+    --sizePath: 408;
+}
+
+::selection {
+    background: #fce100;
+    color: white;
+}
+
+body,
+html {
+    scroll-behavior: smooth;
+    font-family: "Mansalva", cursive;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 200vh;
+    background-color: white;
+}
+
+a:hover {
+    position: relative;
+}
+
+a:hover:before {
+    content: "";
+    left: 0;
+    top: 0.25em;
+    position: absolute;
+    width: 100%;
+    height: 1em;
+    transform: rotate(2deg);
+    opacity: 0.3;
+    border-radius: 0.25em;
+    background: var(--main-yellow);
+}
+
+a:hover:after {
+    content: "";
+    left: 0;
+    top: 0.25em;
+    position: absolute;
+    width: 100%;
+    height: 1em;
+    transform: rotate(-1deg);
+    opacity: 0.3;
+    border-radius: 0.25em;
+    background: var(--main-yellow);
+}
+
+nav {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 7vh;
+    background: rgba(255, 255, 255, 0.9)
+}
+
+nav ul {
+    margin: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    height: 7vh;
+    line-height: 7vh;
+    font-size: 3.5vh;
+}
+
+nav span {
+    position: absolute;
+    font-size: 0;
+}
+
+.scroll-btn {
+    font-size: 5em;
+    display: block;
+    position: relative;
+    text-align: center;
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    top: calc(100vh - 8rem);
+    margin: auto;
+    transform: rotate(90deg);
+    animation: float 3s infinite;
+}
+
+.scroll-btn a,
+.scroll-btn a:hover:before,
+.scroll-btn a:hover:after {
+    all: unset;
+}
+
+.scroll-btn a {
+    text-decoration: none;
+    transition: 0.3s;
+    color: var(--main-yellow);
+    text-shadow: black 1px 1px 1px, black -1px 1px 1px, black 1px -1px 1px, black -1px -1px 1px;
+}
+
+.scroll-btn a:hover {
+    color: var(--main-yellow-darker);
+}
+
+.scroll-btn svg {
+    zoom: 0.8;
+    transform: translate(-20%, -85%);
+    stroke-dashoffset: var(--sizePath);
+    stroke-dasharray: var(--sizePath);
+    stroke: black;
+    stroke-width: 2;
+    stroke-linecap: round;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.scroll-btn a:hover~svg {
+    stroke-dashoffset: 0;
+}
+
+#p1 {
+    width: 100vw;
+    height: 100vh;
+}
+
+.background {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./bg.jpg");
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: bottom;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(90deg);
+    }
+    50% {
+        transform: translateY(3vh) rotate(90deg);
+    }
+    100% {
+        transform: translateY(0) rotate(90deg);
+    }
+}
+
+@media screen and (max-width:768px) {
+    nav ul {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        margin-left: 100%;
+        background-color: white;
+        flex-direction: column;
+        justify-content: space-evenly;
+        text-align: center;
+        transition: .3s;
+    }
+    nav ul li:nth-child(n+3)::before {
+        content: "";
+        border: 1px dashed black;
+        width: 50%;
+        height: 2px;
+        left: 50%;
+        transform: translate(-50%, -10vh);
+        position: absolute;
+        background-color: var(--main-yellow);
+    }
+    .menu-btn {
+        line-height: 7vh;
+        font-size: 5vh;
+        margin-left: calc(100% - 15vh);
+    }
+    .close-btn {
+        width: 3rem;
+        line-height: 3rem;
+        font-size: 3rem;
+        margin: 10px;
+        top: 0;
+        left: 0;
+    }
+    nav span:hover {
+        color: var(--main-yellow);
+        text-shadow: black 1px 1px 1px, black -1px 1px 1px, black 1px -1px 1px, black -1px -1px 1px;
+    }
+    .active {
+        margin: 0;
+    }
+}

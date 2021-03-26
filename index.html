@@ -2,14 +2,38 @@
 <html lang="en">
 
 <head>
+    <title>Combava</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mansalva&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
+    <nav>
+        <span class="menu-btn" onclick="document.querySelector('nav>ul').classList.add('active')">Menu</span>
+        <ul>
+            <span class="close-btn" onclick="document.querySelector('nav>ul').classList.remove('active')">&times;</span>
+            <li><a>David's lemonade</a></li>
+            <li><a>Nos événements</a></li>
+            <li><a>S'inscrire</a></li>
+            <li><a>Contact</a></li>
+        </ul>
+    </nav>
+    <div id="p1">
+        <span class="background"></span>
+        <span class="scroll-btn">
+            <a href="#p2">&raquo;</a>
+            <svg width="110" height="129" viewBox="0 0 110 129" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 121C168 172 103 -63 29 18C-35.8 92.4 26.6667 117.667 66 121" />
+            </svg>
+        </span>
+    </div>
+    <div id="p2">
+        partie 2
+    </div>
 </body>
 
 </html>
