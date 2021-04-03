@@ -1,0 +1,203 @@
+:root {
+    --mainYellow: #FDD82E;
+    --footerYellow: #FBE000;
+}
+
+body {
+    background-image: url("./medias/background.png");
+    background-repeat: repeat;
+    background-size: cover;
+    font-family: 'Caveat', cursive;
+    overflow-x: hidden;
+}
+
+main {
+    margin: 10%;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: calc(100%-60px);
+    height: auto;
+    background: white;
+    border-bottom: 5px solid var(--mainYellow);
+    font-size: 2em;
+    padding: 15px 30px;
+}
+
+nav ul {
+    display: inline;
+    position: absolute;
+    right: 0;
+}
+
+nav ul li {
+    margin: 0 40px;
+    display: inline;
+}
+
+nav h1 {
+    display: inline;
+}
+
+li:hover {
+    position: relative;
+}
+
+li:hover::after {
+    content: "";
+    left: -5%;
+    top: 0.25em;
+    position: absolute;
+    width: 110%;
+    height: 1em;
+    transform: rotate(-1deg);
+    opacity: 0.3;
+    border-radius: 0.25em;
+    background: var(--mainYellow)
+}
+
+li:hover::before {
+    content: "";
+    left: -5%;
+    top: 0.25em;
+    position: absolute;
+    width: 110%;
+    height: 1em;
+    transform: rotate(1deg);
+    opacity: 0.3;
+    border-radius: 0.25em;
+    background: var(--mainYellow)
+}
+
+#footerDiv {
+    background-color: var(--footerYellow);
+}
+
+.burger-btn {
+    position: absolute;
+    right: 1em;
+    width: 1em;
+    font-size: 1em;
+    height: 1em;
+    opacity: 0;
+}
+
+.burger-check {
+    pointer-events: none;
+    position: absolute;
+    right: 1em;
+    height: .15em;
+    width: 1em;
+    margin: .5em .1em;
+    background: lightgrey;
+}
+
+.burger-check::before {
+    content: "";
+    background: lightgrey;
+    height: .15em;
+    display: inline-block;
+    width: 1em;
+    position: absolute;
+    margin: -.3em 0;
+}
+
+.burger-check::after {
+    content: "";
+    background: lightgrey;
+    height: .15em;
+    display: inline-block;
+    width: 1em;
+    position: absolute;
+    margin: .3em 0;
+}
+
+.burger-btn:checked~.burger-check {
+    background: transparent;
+}
+
+.burger-btn:checked~.burger-check::before {
+    transform: rotate(45deg);
+    margin: 0;
+}
+
+.burger-btn:checked~.burger-check::after {
+    transform: rotate(-45deg);
+    margin: 0;
+}
+
+.burger-btn:checked~ul {
+    transform: translate(-100%);
+}
+
+@media screen and (max-width: 940px) {
+    .burger-check {
+        visibility: visible;
+    }
+    nav ul li {
+        display: block;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    nav ul {
+        all: unset;
+        height: calc(100vh - 1em - 12px);
+        background: white;
+        position: absolute;
+        padding: 0;
+        margin: calc(1em - 12px) 0;
+        left: 100%;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    nav ul li:hover::after,
+    nav ul li:hover::before {
+        all: unset;
+    }
+    nav ul li:nth-child(n+2)::before {
+        all: unset;
+        content: "";
+        border: 1px dashed black;
+        width: 50%;
+        height: 2px;
+        left: 50%;
+        transform: translate(-50%, -10vh);
+        position: absolute;
+        background-color: var(--mainYellow);
+    }
+    nav ul li a:hover {
+        position: relative;
+    }
+    nav ul li a:hover:before {
+        content: "";
+        left: -5%;
+        top: 0.25em;
+        position: absolute;
+        width: 110%;
+        height: 1em;
+        transform: rotate(1deg);
+        opacity: 0.3;
+        border-radius: 0.25em;
+        background: var(--mainYellow)
+    }
+    nav ul li a:hover:after {
+        content: "";
+        left: -5%;
+        top: 0.25em;
+        position: absolute;
+        width: 110%;
+        height: 1em;
+        transform: rotate(-1deg);
+        opacity: 0.3;
+        border-radius: 0.25em;
+        background: var(--mainYellow)
+    }
+}
