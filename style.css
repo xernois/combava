@@ -12,7 +12,7 @@ body {
 }
 
 main {
-    margin: 10%;
+    margin:  0 10% 0 10%;
 }
 
 nav {
@@ -74,9 +74,7 @@ li:hover::before {
     background: var(--mainYellow)
 }
 
-#footerDiv {
-    background-color: var(--footerYellow);
-}
+
 
 .burger-btn {
     position: absolute;
@@ -134,6 +132,119 @@ li:hover::before {
 .burger-btn:checked~ul {
     transform: translate(-100%);
 }
+
+
+h1{
+    font-weight: bold;
+    text-align: center;
+    font-size: xx-large;
+    margin-top: 25px;
+}
+hr{
+    width: 15%;
+    height: 5px;
+    background-color: var(--mainYellow);
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+#imgArticle1, #imgArticle2{
+    width: calc(50% - 4px);
+}
+
+.imgQuiSommeNous{
+    height: 500px;
+    width: 100%;
+}
+.texte{
+    width: 50%;
+}
+h2{
+    font-size: x-large;
+    color: var(--mainYellow);
+    font-weight: bold;
+    margin: 0 0 20px 0;
+}
+
+#imgArticle1, .texte, #imgArticle2{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#h2Evenement, #pEvenement{
+    text-align: center;
+}
+
+#bouttonInscription{
+    display: block;
+    margin:0 auto;
+    width: 10%;
+    text-decoration: none;
+    color: var(--mainYellow);
+    font-weight: bold;
+    font-size: x-large;
+}
+#button{
+    height: 50px;
+    line-height: 45px;
+    vertical-align: center;
+    text-align: center;
+    border:2px solid black
+}   
+
+form{
+    margin: 0 15% 0 15%;
+}
+input{
+    display: block;
+    margin: 0 0 20px 0;
+    height: 30px;
+}
+#prenom{
+    margin-left: 64px;
+}
+#nom, #prenom{
+    display: inline-block;
+    width: calc(50% - 42px);
+}
+#email, #telephone, #evenements{
+    width: 100%;
+}
+
+#footerDiv {
+    background-color: var(--footerYellow);
+    text-align: center;
+}
+
+#footerDiv img{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+#footerDiv #twitter{
+    margin:  0 5% 0 5%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 940px) {
     .burger-check {

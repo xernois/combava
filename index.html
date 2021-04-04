@@ -9,9 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./medias/favicon.ico" />
     <title>Combava</title>
-    <link rel="icon" href="./medias/favicon.ico" />
-
+    
 </head>
 
 <body>
@@ -26,20 +26,63 @@
         </ul>
     </nav>
     <main>
-        <form>
+        <h1>Qui sommes-nous</h1>
+        <hr>
+        <article id="article1">
+
+            <div id="imgArticle1">
+               <img class="imgQuiSommeNous" src="./medias/stand.jpg" alt="stand"> 
+            </div>
+            
+            <div class="texte">
+               <h2>Lorem Ipsum</h2> 
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Vestibulum vitae porttitor risus, et ultricies nisl. 
+                Vestibulum ultricies, elit ut mattis imperdiet, lectus lorem pretium odio, sodales finibus magna felis aliquam diam. </p>
+            </div>
+            
+        </article>
+        <article id="article2">
+            
+            <div class="texte">
+                <h2>Lorem Ipsum</h2> 
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Vestibulum vitae porttitor risus, et ultricies nisl. 
+                Vestibulum ultricies, elit ut mattis imperdiet, lectus lorem pretium odio, sodales finibus magna felis aliquam diam. </p>
+            </div>
+
+            <div id="imgArticle2">
+                <img class="imgQuiSommeNous" src="./medias/enfants.jpg" alt="enfants">
+            </div>
+        </article>
+
+
+        <h1>Nos Evenements</h1>
+        <hr>
+        <h2 id="h2Evenement">Lorem Ipsum</h2> 
+        <p id="pEvenement">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae porttitor risus, et ultricies nisl. Vestibulum ultricies, elit ut mattis imperdiet, lectus lorem pretium odio, sodales finibus magna felis aliquam diam. </p>
+        <a id="bouttonInscription" href="#form"><div id="button">Inscrivez-vous</div></a>
+
+
+        <h1>Inscription</h1>
+        <hr>
+
+        
+
+        <form id="form">
             <input type="text" id="nom" name="nom" placeholder="Nom">
-            <input type="text" id="prenom" name="prenom" placeholder="Nom">
+            <input type="text" id="prenom" name="prenom" placeholder="Prenom">
             <input type="text" id="email" name="email" placeholder="Email">
             <input type="text" id="telephone" name="telephone" placeholder="Telephone">
-            <input type="text" id="nom" name="nom" placeholder="Evenements">
+            <input type="text" id="evenements" name="nom" placeholder="Evenements">
 
         </form>
     </main>
     <footer>
         <div id="footerDiv">
-            <a href="facebook.com" target="_blank"><img class="reseaux" alt="facebook" src="./medias/facebook.png"></a>
-            <a href="twitter.com" target="_blank"><img class="reseaux" alt="twitter" src="./medias/facebook.png"></a>
-            <a href="instagram.com" target="_blank"><img class="reseaux" alt="instagram" src="./medias/instagram.png"></a>
+            <a href="facebook.com" target="_blank"><img alt="facebook" src="./medias/facebook.png"></a>
+            <a href="twitter.com" target="_blank"><img id="twitter" alt="twitter" src="./medias/twitter.png"></a>
+            <a href="instagram.com" target="_blank"><img  alt="instagram" src="./medias/instagram.png"></a>
         </div>
     </footer>
 </body>
