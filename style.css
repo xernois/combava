@@ -12,7 +12,7 @@ body {
 }
 
 main {
-    margin:  0 10% 0 10%;
+    margin: 0 10% 0 10%;
 }
 
 nav {
@@ -74,14 +74,13 @@ li:hover::before {
     background: var(--mainYellow)
 }
 
-
-
 .burger-btn {
     position: absolute;
     right: 1em;
     width: 1em;
     font-size: 1em;
     height: 1em;
+    margin: -.95em .1em;
     opacity: 0;
 }
 
@@ -93,6 +92,7 @@ li:hover::before {
     width: 1em;
     margin: .5em .1em;
     background: lightgrey;
+    visibility: hidden;
 }
 
 .burger-check::before {
@@ -133,14 +133,14 @@ li:hover::before {
     transform: translate(-100%);
 }
 
-
-h1{
+h1 {
     font-weight: bold;
     text-align: center;
     font-size: xx-large;
     margin-top: 25px;
 }
-hr{
+
+hr {
     width: 15%;
     height: 5px;
     background-color: var(--mainYellow);
@@ -148,66 +148,80 @@ hr{
     margin-bottom: 25px;
 }
 
-#imgArticle1, #imgArticle2{
+#imgArticle1,
+#imgArticle2 {
     width: calc(50% - 4px);
 }
 
-.imgQuiSommeNous{
+.imgQuiSommeNous {
     height: 500px;
     width: 100%;
 }
-.texte{
+
+.texte {
     width: 50%;
 }
-h2{
+
+h2 {
     font-size: x-large;
     color: var(--mainYellow);
     font-weight: bold;
     margin: 0 0 20px 0;
 }
 
-#imgArticle1, .texte, #imgArticle2{
+#imgArticle1,
+.texte,
+#imgArticle2 {
     display: inline-block;
     vertical-align: middle;
 }
 
-#h2Evenement, #pEvenement{
+#h2Evenement,
+#pEvenement {
     text-align: center;
 }
 
-#bouttonInscription{
+#bouttonInscription {
     display: block;
-    margin:0 auto;
+    margin: 0 auto;
     width: 10%;
     text-decoration: none;
     color: var(--mainYellow);
     font-weight: bold;
     font-size: x-large;
 }
-#button{
+
+#button {
     height: 50px;
     line-height: 45px;
     vertical-align: center;
     text-align: center;
-    border:2px solid black
-}   
+    border: 2px solid black
+}
 
-form{
+form {
     margin: 0 15% 0 15%;
 }
-input{
+
+input {
     display: block;
     margin: 0 0 20px 0;
     height: 30px;
 }
-#prenom{
+
+#prenom {
     margin-left: 64px;
 }
-#nom, #prenom{
+
+#nom,
+#prenom {
     display: inline-block;
     width: calc(50% - 42px);
 }
-#email, #telephone, #evenements{
+
+#email,
+#telephone,
+#evenements {
     width: 100%;
 }
 
@@ -216,35 +230,15 @@ input{
     text-align: center;
 }
 
-#footerDiv img{
+#footerDiv img {
     display: inline-block;
     width: 50px;
     height: 50px;
 }
 
-#footerDiv #twitter{
-    margin:  0 5% 0 5%;
+#footerDiv #twitter {
+    margin: 0 5% 0 5%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media screen and (max-width: 940px) {
     .burger-check {
