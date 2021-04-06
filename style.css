@@ -190,7 +190,10 @@ h2 {
     font-weight: bold;
     font-size: x-large;
 }
-
+#carte{
+    display: block;
+    text-align: center;
+}
 #button {
     height: 50px;
     line-height: 45px;
