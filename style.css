@@ -1,18 +1,18 @@
 :root {
     --mainYellow: #FDD82E;
-    --footerYellow: #FBE000;
 }
 
 body {
     background-image: url("./medias/background.png");
     background-repeat: repeat;
-    background-size: cover;
+    background-size: contain;
     font-family: 'Caveat', cursive;
     overflow-x: hidden;
+    margin: 0;
 }
 
 main {
-    margin: 0 10%;
+    padding: 5% 10%;
 }
 
 #landing {
@@ -23,8 +23,40 @@ main {
     background-size: cover;
     background-attachment: fixed;
 }
+#landing img{
+    display: block;
+    height: 40%;
+    margin: 75px auto;
+}
 
+#landing a{
+    z-index: 50;
+    position: absolute;
+    left:50%;
+    top:80vh;
+    display: block;
+    font-family: "Mansalva", cursive;
+    width:100px;
+    text-align: center;
+    font-size: 4em;
+    margin: auto;
+    transform: translate(-50%,0) rotate(90deg);
+    color: var(--mainYellow);
+    text-shadow: black 1px 1px 1px, black -1px 1px 1px, black 1px -1px 1px, black -1px -1px 1px;
+    line-height: 4em;
+    animation: floatBtn 3s infinite ease;
+    cursor: pointer;
+    transition: .3s;
+    text-decoration: none;
+}
+
+#landing a:visited{
+    text-decoration: none;
+    color: var(--mainYellow);
+}
+    
 nav {
+    z-index: 100;
     position: sticky;
     top: 0;
     left: 0;
@@ -154,17 +186,8 @@ hr {
     height: 5px;
     background-color: var(--mainYellow);
     border-radius: 5px;
+    border: 1px dashed black;
     margin-bottom: 25px;
-}
-
-#imgArticle1,
-#imgArticle2 {
-    width: calc(50% - 4px);
-}
-
-.imgQuiSommeNous {
-    height: 500px;
-    width: 100%;
 }
 
 .texte {
@@ -176,6 +199,24 @@ h2 {
     color: var(--mainYellow);
     font-weight: bold;
     margin: 0 0 20px 0;
+}
+
+article img, article div{
+    height: 500px;
+    display: inline;
+    margin: 0 50px -100px 0;
+}
+
+article img{
+    box-shadow: black 0px 0px 20px;
+}
+
+h2{
+    text-shadow: black 1px 1px 1px, black -1px 1px 1px, black 1px -1px 1px, black -1px -1px 1px;
+}
+
+#article2{
+    text-align: right;
 }
 
 #imgArticle1,
@@ -190,13 +231,64 @@ h2 {
     text-align: center;
 }
 
+
+p{
+    font-size:2em;
+}
+/************************************************************/
+/*                        FORM                              */
+/************************************************************/
+#formulaire {
+    margin: 0 15% 0 15%;
+    display: flex;
+    justify-content: space-between;
+}
+input {
+    height: 40px;
+}
+#email, select{
+    width:100%;
+}
+input::placeholder, select, input{
+    font-family: 'Caveat', cursive;
+    font-size: 1.3em;
+} 
+#telephone{
+    display: block;
+    margin:auto;
+}
+#formNomPrenom #nom , #formNomPrenom #prenom{
+    width: 40%;
+}
+#formNomPrenom, #email, #telephone, select{
+    margin-bottom: 50px;
+}
+#formNomPrenom{
+    display:flex;
+    justify-content: center;
+    flex-wrap:nowrap;
+    justify-content: space-between;
+}
+
+select{
+    height: 50px;
+}
+#telephone{
+    width: 75%;
+}
+
+
+/************************************************************/
+/*                         CARTE                            */
+/************************************************************/
 #bouttonInscription {
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 150px;
     width: 10%;
     text-decoration: none;
-    color: var(--mainYellow);
+    background-color: var(--mainYellow);
     font-weight: bold;
+    color:black;
     font-size: x-large;
 }
 
@@ -212,48 +304,29 @@ h2 {
     text-align: center;
     border: 2px solid black
 }
-
-form {
-    margin: 0 15% 0 15%;
+iframe{
+    margin: 30px;
+    clip-path: polygon(0 11.5%, 100% 11.5%, 100% 100%, 0% 100%);
 }
 
-input {
+/************************************************************/
+/*                        FOOTER                            */
+/************************************************************/
+footer{
     display: block;
-    margin: 0 0 20px 0;
-    height: 30px;
-}
-
-#prenom {
-    margin-left: 64px;
-}
-
-#nom,
-#prenom {
-    display: inline-block;
-    width: calc(50% - 42px);
-}
-
-#email,
-#telephone,
-#evenements {
-    width: 100%;
-}
-
-#footerDiv {
-    background-color: var(--footerYellow);
+    background-color: var(--mainYellow);
     text-align: center;
 }
 
-#footerDiv img {
+footer img {
     display: inline-block;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
+    margin: 10px 5px;
 }
-
-#footerDiv #twitter {
-    margin: 0 5% 0 5%;
-}
-
+/************************************************************/
+/*                                                          */
+/************************************************************/
 @media screen and (max-width: 940px) {
     .burger-check {
         visibility: visible;
@@ -320,3 +393,20 @@ input {
         background: var(--mainYellow)
     }
 }
+
+
+/************************************************************/
+/*                        ANIMATIONS                        */
+/************************************************************/
+@keyframes floatBtn{
+    0%{
+        transform:rotate(90deg) translate(-15px,25px); 
+    }
+    50%{
+        transform:rotate(90deg) translate(15px,25px); 
+    }
+    100%{
+        transform:rotate(90deg) translate(-15px,25px); 
+    }
+}
+
