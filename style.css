@@ -1,5 +1,12 @@
 :root {
-    --mainYellow: #FDD82E;
+    --mainYellow: rgb(253, 216, 46);
+}
+html{
+    scroll-behavior: smooth;
+
+}
+::selection{
+    background-color: rgba(253, 216, 46, .6);
 }
 
 body {
@@ -33,7 +40,7 @@ main {
     z-index: 50;
     position: absolute;
     left:50%;
-    top:80vh;
+    top:75vh;
     display: block;
     font-family: "Mansalva", cursive;
     width:100px;
@@ -76,9 +83,13 @@ nav ul {
     right: 0;
 }
 
-nav ul li {
-    margin: 0 40px;
+nav ul a li {
+    margin: 0 20px;
     display: inline;
+}
+nav ul a{
+    text-decoration: none;
+    color: black;
 }
 
 nav h1 {
@@ -121,7 +132,7 @@ li:hover::before {
     width: 1em;
     font-size: 1em;
     height: 1em;
-    margin: -.95em .1em;
+    margin: 0em .1em;
     opacity: 0;
 }
 
@@ -183,6 +194,7 @@ h1 {
 
 hr {
     width: 15%;
+    min-width: 200px;
     height: 5px;
     background-color: var(--mainYellow);
     border-radius: 5px;
@@ -192,6 +204,7 @@ hr {
 
 .texte {
     width: 50%;
+
 }
 
 h2 {
@@ -201,6 +214,13 @@ h2 {
     margin: 0 0 20px 0;
 }
 
+h5{
+    text-align: center;
+    font-weight: bold;
+    font-size: 3em;
+    color:#1C2704
+
+}
 article img, article div{
     height: 500px;
     display: inline;
@@ -225,7 +245,13 @@ h2{
     display: inline-block;
     vertical-align: middle;
 }
-
+#bio{
+    display: block;
+    text-align: center;
+}
+#bio img{
+    width: 50%;
+}
 #h2Evenement,
 #pEvenement {
     text-align: center;
@@ -238,13 +264,17 @@ p{
 /************************************************************/
 /*                        FORM                              */
 /************************************************************/
-#formulaire {
+#form {
     margin: 0 15% 0 15%;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    
 }
-input {
+form input {
     height: 40px;
+    border:2px solid var(--mainYellow)
 }
 #email, select{
     width:100%;
@@ -253,43 +283,62 @@ input::placeholder, select, input{
     font-family: 'Caveat', cursive;
     font-size: 1.3em;
 } 
-#telephone{
-    display: block;
-    margin:auto;
-}
-#formNomPrenom #nom , #formNomPrenom #prenom{
-    width: 40%;
-}
-#formNomPrenom, #email, #telephone, select{
+#nom, #prenom, #email, #telephone, select{
     margin-bottom: 50px;
-}
-#formNomPrenom{
-    display:flex;
-    justify-content: center;
-    flex-wrap:nowrap;
-    justify-content: space-between;
+    min-width: 350px;
+    width: 50%;
 }
 
+#validation{
+    display: block;
+    text-align: center;
+    height: 30px;
+}
+
+#validation input{
+    height: 30px;
+    padding: 0;
+    margin:0;
+}
 select{
     height: 50px;
+    border:2px solid var(--mainYellow);
 }
-#telephone{
-    width: 75%;
+#validation label{
+    font-size: 25px;
+    vertical-align: top;
 }
 
+input[type="submit"]{
+    margin: 0 auto;
+    background-color: var(--mainYellow);
+    font-weight: bold;
+    color:black;
+    font-size: x-large;
+    width: max-content;
+    padding: 0 30px;
+    height: 50px;
+    line-height: 50px;
+    border: 2px solid var(--mainYellow);
+    transition: .3s; 
+}
+
+input[type="submit"]:hover{
+    border: 2px solid black;
+}
 
 /************************************************************/
 /*                         CARTE                            */
 /************************************************************/
-#bouttonInscription {
+.bouttonInscription{
     display: block;
-    margin: 0 auto 150px;
-    width: 10%;
+    margin: 0 auto;
     text-decoration: none;
     background-color: var(--mainYellow);
     font-weight: bold;
     color:black;
     font-size: x-large;
+    width: max-content;
 }
 
 #carte {
@@ -297,12 +346,17 @@ select{
     text-align: center;
 }
 
-#button {
-    height: 50px;
+.button {
     line-height: 45px;
     vertical-align: center;
     text-align: center;
-    border: 2px solid black
+    padding:10px 50px;
+    border: 2px solid var(--mainYellow);
+    box-sizing: border-box;
+    transition: .3s;
+}
+.button:hover{
+    border: 2px solid black;
 }
 iframe{
     margin: 30px;
@@ -316,18 +370,23 @@ footer{
     display: block;
     background-color: var(--mainYellow);
     text-align: center;
+    height: 40px;
+    padding:10px;
 }
 
 footer img {
     display: inline-block;
     width: 40px;
     height: 40px;
-    margin: 10px 5px;
+    margin:0 10px;
+}
+footer a{
+    height: 40px;
 }
 /************************************************************/
 /*                                                          */
 /************************************************************/
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 768px) {
     .burger-check {
         visibility: visible;
     }
@@ -349,21 +408,7 @@ footer img {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-    }
-    nav ul li:hover::after,
-    nav ul li:hover::before {
-        all: unset;
-    }
-    nav ul li:nth-child(n+2)::before {
-        all: unset;
-        content: "";
-        border: 1px dashed black;
-        width: 50%;
-        height: 2px;
-        left: 50%;
-        transform: translate(-50%, -10vh);
-        position: absolute;
-        background-color: var(--mainYellow);
+        text-align: center;
     }
     nav ul li a:hover {
         position: relative;
@@ -391,6 +436,35 @@ footer img {
         opacity: 0.3;
         border-radius: 0.25em;
         background: var(--mainYellow)
+    }
+    article {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    article .texte{
+        height:auto;
+        width:80%;
+        margin:50px 10%;
+        text-align: center;
+        padding:0;
+    }
+    article img{
+        float: none;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    #article2{
+        flex-direction: column-reverse;
+    }
+    iframe{
+        width:90%;
+    }
+    h5{
+        width: 80%;
+        margin:auto;
+        font-size: 2.5em;
     }
 }
 

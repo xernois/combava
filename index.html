@@ -20,67 +20,82 @@
         <input type="checkbox" class="burger-btn"></input>
         <span class="burger-check"></span>
         <ul>
-            <li><a>Qui sommes-nous</a></li>
-            <li><a>Evenements</a></li>
-            <li><a>Inscription</a></li>
+            <a href="#main"><li>Qui sommes-nous</li></a>
+            <a href="#event"><li>Evenements</li></a>
+            <a href="#formulaire"><li>Inscription</li></a>
         </ul>
     </nav>
     <div id="landing">
         <img src="./medias/logoLanding.png" alt="David's lemonade logo">
+        <h5>«When life gives you lemons, make lemonade» <br><br>David</h1>
         <a href="#main">»</a>
     </div>
+
     <main id="main">
         <h1 id="articles">Qui sommes-nous</h1>
         <hr>
         <article id="article1">
 
-                <img src="./medias/stand.jpg" alt="stand">
+            <img src="./medias/stand.jpg" alt="stand">
 
             <div class="texte">
-                <h2>Lorem Ipsum</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae porttitor risus, et ultricies nisl. Vestibulum ultricies, elit ut mattis imperdiet, lectus lorem pretium odio, sodales finibus magna felis aliquam diam. </p>
+                <h2>L'association Combava</h2>
+                <p>Nous sommes une association appelée Combava qui regroupe des producteurs indépendants d'agrumes afin de se faire connaître tant auprès des magasins que des clients. Pour cela, l’association décide d'organiser des dégustations privées, VIP, de citronnade tout autour du pays, à la façon des négociants en vin.</p>
             </div>
 
         </article>
         <article id="article2">
 
             <div class="texte">
-                <h2>Lorem Ipsum</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae porttitor risus, et ultricies nisl. Vestibulum ultricies, elit ut mattis imperdiet, lectus lorem pretium odio, sodales finibus magna felis aliquam diam. </p>
+                <h2>La citronnade</h2>
+                <p>La citronnade est une boisson saine, mettant en avant le goût unique des différents agrumes frais et bio de producteurs indépendants d'agrumes du sud de la France.  Les producteurs adhérents seront présents lors des dégustations pour défendre la qualité de leurs produits .</p>
             </div>
 
                 <img src="./medias/enfants.jpg" alt="enfants">
         </article>
 
-
-        <h1>Nos Evenements</h1>
-        <hr>
-        <h2 id="h2Evenement">Lorem Ipsum</h2>
-        <p id="pEvenement">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae porttitor risus, et ultricies nisl. Vestibulum ultricies, elit ut mattis imperdiet, lectus lorem pretium odio, sodales finibus magna felis aliquam diam. </p>
-        <div id="carte">
-            <iframe style="border:0; " allowFullscreen aria-hidden="false" width="640" height="480" src="https://www.google.com/maps/d/u/0/embed?mid=1KgqfCUPsX1g3hWju5Fp2IoRAw9mdLKev" ></iframe>
-        </div>
-        <a id="bouttonInscription" href="#form">
-            <div id="button">Inscrivez-vous</div>
-        </a>
-
-
-        <h1>Inscription</h1>
-        <hr>
-
-
-
-        <form id="form">
-            <div id="formNomPrenom">
-                <input type="text" id="nom" name="nom" placeholder="Nom">
-                <input type="text" id="prenom" name="prenom" placeholder="Prenom">
+        <article>
+            <img src="./medias/agrume.jpg" alt="agrumes">
+            <div class="texte">
+                <h2>Les agrumes</h2>
+                <p>Les agrumes sont ce qu'il y a de meilleures pour votre santé. Il possèdent de nombreuses vertus. Ils sont peu caloriques, apportent des fibres essentielles pour réguler le transit et lutter contre la constipation et fournissent de la vitamine C permettant de lutter contre la fatigue. </p>
             </div>
             
-            <input type="text" id="email" name="email" placeholder="Email">
-            <input type="text" id="telephone" name="telephone" placeholder="Telephone">
+        </article>
+
+        <div id="bio">
+            <img  src="./medias/bio.png">
+        </div>
+
+        <h6 id="event"></h6>
+        <br><br><br><br><br><br>
+        <h1 id="events">Nos Evenements</h1>
+        <hr>
+
+        <h2 id="h2Evenement">Venez nous rencontrer</h2>
+        <p id="pEvenement">Voici la liste de notre tour de France de nos dégustations. Chaque événements aura ses propres producteurs locaux ainsi que les agrumes propres à la région. Que vous soyez entrepreneur, sportif en quête de fraicheur après un effort ou tout simplement amateur de citronnade, vous êtes conviés à une dégustation conviviale et chaleureuse ! </p>
+        <div id="carte">
+            <iframe style="border:0; " allowFullscreen aria-hidden="false" width="50%" height="480" src="https://www.google.com/maps/d/u/0/embed?mid=1KgqfCUPsX1g3hWju5Fp2IoRAw9mdLKev" ></iframe>
+        </div>
+        <a class="bouttonInscription" href="#form">
+            <div class="button">Inscrivez-vous</div>
+        </a>
+
+        <h6 id="formulaire"></h6>   
+        <br><br><br><br><br>
+
+        <h1 id="inscription">Inscription</h1>
+        <hr>
+        <form id="form">
+            <input type="text" id="nom" name="nom" placeholder="Nom" required>
+            <input type="text" id="prenom" name="prenom" placeholder="Prenom" required>
+          
+            
+            <input type="text" id="email" name="email" placeholder="Email" required>
+            <input type="text" id="telephone" name="telephone" placeholder="Telephone" required>
 
             <select name="evenements">
-                <option value="choixEvenements" autofocus="true">--Choisir le lieu de dégustation--</option>
+                <option value="choixEvenements" disabled selected>--Choisir le lieu de dégustation--</option>
                 <option value="poitiers">AMAP les Grand’Goules, Poitiers</option>
                 <option value="civray">AMAP Bio des 2 rives, Civray-de-Touraine</option>
                 <option value="laRochelle">Amap des Voiliers, La Rochelle</option>
@@ -100,7 +115,11 @@
             <div id="validation">
                 <input type="checkbox" id="valider1" name="valider" value="validation">
                 <label for="valider1">J'accepte de recevoir des informations sur l'événement par courriel</label>
-            </div>         
+            </div><br><br>
+
+            <input class="bouton" type="submit" value="Valider">
+
+            
         </form>
     </main>
     <footer>
@@ -109,5 +128,4 @@
     <a href="https://www.instagram.com" target="_blank"><img alt="instagram" src="./medias/instagram.png"></a>
     </footer>
 </body>
-
-</html>r
+</html>
