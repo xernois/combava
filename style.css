@@ -43,6 +43,12 @@ h5{
     color:#1C2704;
 }
 
+h5 span{
+    font-style: italic;
+    font-size: .7em;
+    font-weight: 600;
+}
+
 
 
 hr {
@@ -114,7 +120,6 @@ article {
     flex-wrap: nowrap;
 }
 article .texte{
-    height:auto;
     margin:10px auto;
     width: 80%;
     text-align: center;
@@ -131,7 +136,8 @@ article img{
     text-align: center;
 }
 #bio img{
-    width: 80%;
+    min-width: 150px;
+    width: 20%;
 }
 /************************************************************/
 /*                        FOOTER                            */
@@ -255,6 +261,8 @@ iframe{
 #h2Evenement,
 #pEvenement {
     text-align: center;
+    width: 80%;
+    margin: auto;
 }
 /************************************************************/
 /*                         NAVABR                           */
@@ -396,15 +404,17 @@ iframe{
 }
 
 #bio img{
-    width: 40%;
+    width: 15%;
+    
 }
 article {
+    position: relative;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin: 100px 0;
 }
-article img, article div{
+article img{
     height: 500px;
     width: 583px;
     display: inline;
@@ -415,18 +425,25 @@ article .texte {
     margin: 0;
     padding: 0;
     width: calc(80% - 500px);
+    position: absolute;
+    height:fit-content;
+    top:50%;
 }
 #article2{
     flex-direction: row-reverse;
 }
 #article2 .texte{
     text-align: right;
+        transform: translateY(-50%);
+    right: 600px;
 }
 #article2 img{
     margin: 0 0 0 50px;
 }
 #article1 .texte, #article3 .texte{
     text-align: left;
+    transform: translateY(-50%);
+    left: 600px;
 }
 
 nav{
